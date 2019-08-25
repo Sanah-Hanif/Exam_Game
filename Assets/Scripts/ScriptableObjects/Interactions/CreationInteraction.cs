@@ -6,7 +6,7 @@ namespace ScriptableObjects.Interactions
     public class CreationInteraction : Interaction
     {
 
-        public GameObject createdObject;
+        [HideInInspector] public GameObject createdObject;
         
         [SerializeField] private GameObject creation;
         

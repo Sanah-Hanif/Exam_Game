@@ -88,7 +88,9 @@ GameObject:
   - component: {fileID: 3042235149349959463}
   - component: {fileID: 3042235149349959461}
   - component: {fileID: 3042235149349959462}
-  - component: {fileID: 4038075853038399205}
+  - component: {fileID: 6204434676179633928}
+  - component: {fileID: 1935901944704711004}
+  - component: {fileID: 8377863251331429554}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -158,7 +160,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4038075853038399205
+--- !u!114 &6204434676179633928
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,9 +169,57 @@ MonoBehaviour:
   m_GameObject: {fileID: 3042235149349959464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0ee59b2529b824eb6fad045410ff77, type: 3}
+  m_Script: {fileID: 11500000, guid: 4991119cae07d9e4db4e5630b7948ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Interaction: {fileID: 11400000, guid: 155a7e5dc14a84545a39384dca6e31a8, type: 2}
+  Settings: {fileID: 11400000, guid: 4370802687c207841a5abb6c6f2de9e3, type: 2}
+  input: {fileID: 1935901944704711004}
+--- !u!114 &1935901944704711004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3042235149349959464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 6f4087a6851e68d4aa986caf8b4903a8,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.InputSystem.PlayerInput+DeviceLostEvent, Unity.InputSystem,
+      Version=0.9.4.0, Culture=neutral, PublicKeyToken=null
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.InputSystem.PlayerInput+DeviceRegainedEvent, Unity.InputSystem,
+      Version=0.9.4.0, Culture=neutral, PublicKeyToken=null
+  m_ActionEvents: []
+  m_AutoSwitchControlScheme: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &8377863251331429554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3042235149349959464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c152806ab765143b4f193d436c7ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 3042235149349959461}
-  playerNumber: 1
+  playerNumber: 0
   settings: {fileID: 11400000, guid: 4370802687c207841a5abb6c6f2de9e3, type: 2}
+  input: {fileID: 1935901944704711004}

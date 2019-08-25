@@ -22,7 +22,7 @@ public class GamePadManager : MonoBehaviour
         _gamepads = Gamepad.all.ToArray();
         foreach (var gamepad in _gamepads)
         {
-            Debug.Log(gamepad);
+            //Debug.Log(gamepad);
         }
     }
 }
