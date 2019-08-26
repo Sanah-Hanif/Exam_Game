@@ -967,7 +967,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.000000029802322}
   serializedVersion: 2
-  m_Radius: 1.42
+  m_Radius: 0.82
 --- !u!114 &843798992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1061,8 +1061,8 @@ MonoBehaviour:
   positions:
   - {x: 0, y: 0}
   rotation:
-  - {x: 0, y: 0, z: 30.478, w: 0}
-  - {x: 0, y: 0, z: -30.478, w: 0}
+  - {x: 0, y: 0, z: 30.478}
+  - {x: 0, y: 0, z: -30.478}
 --- !u!1 &1389386359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,8 +1110,8 @@ MonoBehaviour:
   positions:
   - {x: 6.575, y: 2.25}
   rotation:
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 90, w: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 90}
 --- !u!1 &1541785093 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3042235149349959464, guid: 30747d4181390dc439a9799ae8d6a281,
