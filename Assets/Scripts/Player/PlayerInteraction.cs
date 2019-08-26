@@ -12,13 +12,11 @@ namespace Player
 
         [SerializeField] private ScriptableObjects.Interactions.Interaction Interaction;
         [SerializeField] private PlayerSettings Settings;
-        [SerializeField] private PlayerInput input;
+        [SerializeField] private PlayerInputManager input;
 
         private InputActionMap ability;
         private InputActionMap movement;
         private GameObject CreatedObject;
-        
-        private ReadOnlyArray<InputActionMap> Active;
 
         private void Awake()
         {
@@ -33,9 +31,8 @@ namespace Player
 
         private void Initialize()
         {
-            Active = input.actions.actionMaps;
-            ability = Active[Active.Count-1];
-            movement = Active[0];
+            ability = input.Ability;
+            movement = input.Player;
             ability.Disable();
             movement.GetAction("Ability").performed += ctx => Interact();
             ability.GetAction("Rotate").performed += ctx => Rotate(ctx.ReadValue<float>());
