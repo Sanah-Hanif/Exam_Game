@@ -48,6 +48,14 @@ public class PlayerControls : IInputActionCollection
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""03210a6b-7fb7-407a-ab90-26130b386803"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -63,12 +71,78 @@ public class PlayerControls : IInputActionCollection
                     ""isPartOfComposite"": false
                 },
                 {
+                    ""name"": ""Keyboard"",
+                    ""id"": ""7b759160-8b0e-4315-b924-fc41b77b565a"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""97402250-9ab9-4957-8093-f25e9a3a579f"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";keyboard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""3031f8ea-c368-46a6-bc12-6d543acc2b1e"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";keyboard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""a9b4a45c-dd3e-497e-b1cf-bf20f5e69610"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";keyboard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""d749a2d2-86b1-47c3-b4fd-a8f2546c267f"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";keyboard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""dbd2ffcb-c899-4dbd-8ed9-ce989e9050db"",
                     ""path"": ""<XInputController>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";XBox360"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""16a36831-88b0-47b6-bfbc-0acda66ab342"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";keyboard"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -86,12 +160,56 @@ public class PlayerControls : IInputActionCollection
                 },
                 {
                     ""name"": """",
+                    ""id"": ""324b29ef-4b85-43f4-b068-3b5380b5809a"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";keyboard"",
+                    ""action"": ""Ability"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""f0dfb943-f17d-4892-99ec-9ee2715e8bd6"",
                     ""path"": ""<XInputController>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";XBox360"",
                     ""action"": ""JumpHold"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9573c99b-f12c-4933-8033-25eb19ba10ae"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";keyboard"",
+                    ""action"": ""JumpHold"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f8e690c6-3517-47e3-a543-e6ac3f7df1ec"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";keyboard"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6ad216c1-6c16-40e8-9bc3-4c34d85acc25"",
+                    ""path"": ""<XInputController>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";XBox360"",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -572,6 +690,61 @@ public class PlayerControls : IInputActionCollection
                     ""isPartOfComposite"": false
                 },
                 {
+                    ""name"": ""Arrow Keys"",
+                    ""id"": ""2177dcb6-2403-4596-aa35-e0f19f0b78f6"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""f2257907-669f-43d6-9c5e-bf8fab94f544"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";keyboard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""301cbefe-fdfd-410e-8f14-4400bdd86e2c"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";keyboard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""9951bd7c-d5d9-405c-b509-2fc63f57b3ee"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";keyboard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""65addde5-66a9-4922-aead-b266551e45e0"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";keyboard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""c44be28a-41cd-475c-9412-c2e84ce7dd99"",
                     ""path"": ""<XInputController>/buttonWest"",
@@ -584,11 +757,33 @@ public class PlayerControls : IInputActionCollection
                 },
                 {
                     ""name"": """",
+                    ""id"": ""910955aa-fe6e-41c8-8cc0-799bd824e608"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";keyboard"",
+                    ""action"": ""Place"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""34ad5365-2344-4c2a-af53-810d23c2d841"",
                     ""path"": ""<XInputController>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";XBox360"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""540f0d5a-70d4-466d-af93-e09c27983994"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";keyboard"",
                     ""action"": ""Cancel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -625,6 +820,39 @@ public class PlayerControls : IInputActionCollection
                     ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Keyboard"",
+                    ""id"": ""bd074eef-44b8-4db6-aaad-5bb3f33cf982"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""9cbcd5a5-511f-48c3-b449-cb9dedf8e424"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";keyboard"",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""4b4d3b6e-1b04-40d7-9d2b-702a94e0c9f4"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";keyboard"",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -653,6 +881,18 @@ public class PlayerControls : IInputActionCollection
                     ""isOR"": false
                 }
             ]
+        },
+        {
+            ""name"": ""keyboard"",
+            ""basedOn"": """",
+            ""bindingGroup"": ""keyboard"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
         }
     ]
 }");
@@ -662,6 +902,7 @@ public class PlayerControls : IInputActionCollection
         m_Player1_Jump = m_Player1.GetAction("Jump");
         m_Player1_JumpHold = m_Player1.GetAction("JumpHold");
         m_Player1_Ability = m_Player1.GetAction("Ability");
+        m_Player1_Interact = m_Player1.GetAction("Interact");
         // Player2
         m_Player2 = asset.GetActionMap("Player2");
         m_Player2_Move = m_Player2.GetAction("Move");
@@ -739,6 +980,7 @@ public class PlayerControls : IInputActionCollection
     private readonly InputAction m_Player1_Jump;
     private readonly InputAction m_Player1_JumpHold;
     private readonly InputAction m_Player1_Ability;
+    private readonly InputAction m_Player1_Interact;
     public struct Player1Actions
     {
         private PlayerControls m_Wrapper;
@@ -747,6 +989,7 @@ public class PlayerControls : IInputActionCollection
         public InputAction @Jump => m_Wrapper.m_Player1_Jump;
         public InputAction @JumpHold => m_Wrapper.m_Player1_JumpHold;
         public InputAction @Ability => m_Wrapper.m_Player1_Ability;
+        public InputAction @Interact => m_Wrapper.m_Player1_Interact;
         public InputActionMap Get() { return m_Wrapper.m_Player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -768,6 +1011,9 @@ public class PlayerControls : IInputActionCollection
                 Ability.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnAbility;
                 Ability.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnAbility;
                 Ability.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnAbility;
+                Interact.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnInteract;
+                Interact.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnInteract;
+                Interact.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnInteract;
             }
             m_Wrapper.m_Player1ActionsCallbackInterface = instance;
             if (instance != null)
@@ -784,6 +1030,9 @@ public class PlayerControls : IInputActionCollection
                 Ability.started += instance.OnAbility;
                 Ability.performed += instance.OnAbility;
                 Ability.canceled += instance.OnAbility;
+                Interact.started += instance.OnInteract;
+                Interact.performed += instance.OnInteract;
+                Interact.canceled += instance.OnInteract;
             }
         }
     }
@@ -1025,12 +1274,22 @@ public class PlayerControls : IInputActionCollection
             return asset.controlSchemes[m_SwitchSchemeIndex];
         }
     }
+    private int m_keyboardSchemeIndex = -1;
+    public InputControlScheme keyboardScheme
+    {
+        get
+        {
+            if (m_keyboardSchemeIndex == -1) m_keyboardSchemeIndex = asset.GetControlSchemeIndex("keyboard");
+            return asset.controlSchemes[m_keyboardSchemeIndex];
+        }
+    }
     public interface IPlayer1Actions
     {
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnJumpHold(InputAction.CallbackContext context);
         void OnAbility(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
     public interface IPlayer2Actions
     {

@@ -17,11 +17,9 @@ public class Movement : MonoBehaviour
     [SerializeField] private Rigidbody2D rigidBody;
     [SerializeField] private int playerNumber;
     [SerializeField] private PlayerSettings settings;
-    [SerializeField] private PlayerInput input;
+    [SerializeField] private PlayerInputManager input;
 
-    private ReadOnlyArray<InputActionMap> Active;
-
-    private InputActionMap map;
+    private InputActionMap movement;
 
     private void Awake()
     {
@@ -36,16 +34,15 @@ public class Movement : MonoBehaviour
 
     private void Initialize()
     {
-        Active = input.actions.actionMaps;
-        map = Active[0];
-        map.Enable();
-        map.GetAction("Jump").performed += ctx => Jump();
-        map.GetAction("JumpHold").performed += ctx => JumpHold();
+        movement = input.Player;
+        movement.Enable();
+        movement.GetAction("Jump").performed += ctx => Jump();
+        movement.GetAction("JumpHold").performed += ctx => JumpHold();
     }
 
     private void MoveLeftStick()
     {
-        var direc =  map.GetAction("move").ReadValue<Vector2>();
+        var direc =  movement.GetAction("move").ReadValue<Vector2>();
         var velocity = rigidBody.velocity;
         if (direc.magnitude > 0.5f)
         {
@@ -107,8 +104,8 @@ public class Movement : MonoBehaviour
 
     private void OnDisable()
     {
-        map.GetAction("Jump").performed -= ctx => Jump();
-        map.GetAction("JumpHold").performed -= ctx => JumpHold();
-        map.Disable();
+        movement.GetAction("Jump").performed -= ctx => Jump();
+        movement.GetAction("JumpHold").performed -= ctx => JumpHold();
+        movement.Disable();
     }
 }
