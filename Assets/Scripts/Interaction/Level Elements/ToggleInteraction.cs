@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Interaction.Level_Elements
 {
-    public class ToggleInteraction : InteractionController
+    public class ToggleInteraction : EnvironmentInteraction
     {
 
         [SerializeField] private List<Vector2> positions;

@@ -9,12 +9,14 @@ namespace Interaction.Level_Elements
     public class Switch : InteractionController
     {
 
-        [SerializeField] private List<InteractionController> dependancies;
+        [SerializeField] private List<EnvironmentInteraction> dependancies;
+
+        private InputActionMap map;
         
         public override void Interact()
         {
             if(dependancies == null)
-                dependancies = new List<InteractionController>();
+                dependancies = new List<EnvironmentInteraction>();
             if(dependancies.Count == 0)
                 return;
             foreach (var interaction in dependancies)
@@ -26,19 +28,19 @@ namespace Interaction.Level_Elements
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.layer != LayerMask.NameToLayer("Player")) return;
-            var map = other.GetComponent<PlayerInputManager>().Player;
+            map = other.GetComponent<PlayerInputManager>().Player;
             map.GetAction("Ability").Disable();
             map.GetAction("Interact").performed += Performed;
             map.GetAction("Interact").Enable();
         }
 
-        private void OnTriggerExit(Collider other)
+        private void OnTriggerExit2D(Collider2D other)
         {
             if (other.gameObject.layer != LayerMask.NameToLayer("Player")) return;
-            var map = GetComponent<PlayerInputManager>().Player;
             map.GetAction("Ability").Enable();
             map.GetAction("Interact").performed -= Performed;
             map.GetAction("Interact").Disable();
+            map = null;
         }
 
         private void Performed(InputAction.CallbackContext ctx)

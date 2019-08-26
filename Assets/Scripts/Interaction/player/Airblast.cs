@@ -1,28 +1,57 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using System.Security.Cryptography;
+using Interaction.Level_Elements;
 using Interactions;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 
-public class Airblast : InteractionController
+namespace Interaction.player
 {
-
-    [SerializeField] private float velocity = 3f;
-    [SerializeField] private float destroyTime = 2f;
-    
-    public override void Interact()
+    public class Airblast : InteractionController
     {
-        Collider2D col = GetComponent<Collider2D>();
-        Collider2D[] cols = Physics2D.OverlapBoxAll((Vector2) transform.position, (Vector2) col.bounds.size, 
-            transform.rotation.eulerAngles.z);
-        foreach (var collider in cols)
+
+        [SerializeField] private float velocity = 3f;
+        [SerializeField] private float destroyTime = 2f;
+
+        private Collider2D[] cols;
+        private List<Rigidbody2D> _rigidbody2Ds;
+        private bool initialized = false;
+    
+        public override void Interact()
         {
-            var rb = collider.GetComponent<Rigidbody2D>();
-            if (rb)
+            _rigidbody2Ds = new List<Rigidbody2D>();
+            Collider2D col = GetComponent<Collider2D>();
+            cols = Physics2D.OverlapBoxAll(transform.position, col.bounds.size, 
+                transform.rotation.eulerAngles.z);
+            foreach (var collider in cols)
+            {
+                var rb = collider.GetComponent<Rigidbody2D>();
+                if (rb)
+                {
+                    _rigidbody2Ds.Add(rb);
+                }
+
+                var _switch = collider.GetComponent<Switch>();
+                if(_switch)
+                    _switch.Interact();
+            }
+            initialized = true;
+            Destroy(gameObject, destroyTime);
+        }
+
+        private void FixedUpdate()
+        {
+            if(!initialized)
+                return;
+            foreach (var rb in _rigidbody2Ds)
             {
                 rb.velocity = transform.right * velocity;
             }
         }
-        Destroy(gameObject, destroyTime);
+
+        private void OnDestroy()
+        {
+            _rigidbody2Ds.Clear();
+        }
     }
 }
