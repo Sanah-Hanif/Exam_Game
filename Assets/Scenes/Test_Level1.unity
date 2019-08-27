@@ -500,7 +500,7 @@ GameObject:
   - component: {fileID: 88302445}
   - component: {fileID: 88302444}
   - component: {fileID: 88302443}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2803,7 +2803,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
@@ -3893,27 +3893,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1935901944704711004, guid: 30747d4181390dc439a9799ae8d6a281,
-        type: 3}
-      propertyPath: m_DefaultControlScheme
-      value: XBox360
-      objectReference: {fileID: 0}
-    - target: {fileID: 1935901944704711004, guid: 30747d4181390dc439a9799ae8d6a281,
-        type: 3}
-      propertyPath: m_DefaultActionMap
-      value: 6e0975ac-ad30-4e29-87b3-e6be2e25e18d
-      objectReference: {fileID: 0}
-    - target: {fileID: 6204434676179633928, guid: 30747d4181390dc439a9799ae8d6a281,
-        type: 3}
-      propertyPath: Interaction
-      value: 
-      objectReference: {fileID: 11400000, guid: b43657f27cadbbf479d5f78285a08435,
-        type: 2}
-    - target: {fileID: 6204434676179633928, guid: 30747d4181390dc439a9799ae8d6a281,
-        type: 3}
-      propertyPath: input
-      value: 
-      objectReference: {fileID: 1541785094}
     - target: {fileID: 3042235149349959463, guid: 30747d4181390dc439a9799ae8d6a281,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3968,6 +3947,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204434676179633928, guid: 30747d4181390dc439a9799ae8d6a281,
+        type: 3}
+      propertyPath: Interaction
+      value: 
+      objectReference: {fileID: 11400000, guid: b43657f27cadbbf479d5f78285a08435,
+        type: 2}
+    - target: {fileID: 6204434676179633928, guid: 30747d4181390dc439a9799ae8d6a281,
+        type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 1541785094}
+    - target: {fileID: 1935901944704711004, guid: 30747d4181390dc439a9799ae8d6a281,
+        type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: XBox360
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935901944704711004, guid: 30747d4181390dc439a9799ae8d6a281,
+        type: 3}
+      propertyPath: m_DefaultActionMap
+      value: 6e0975ac-ad30-4e29-87b3-e6be2e25e18d
       objectReference: {fileID: 0}
     - target: {fileID: 8377863251331429554, guid: 30747d4181390dc439a9799ae8d6a281,
         type: 3}
@@ -4062,7 +4062,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: beb03935d0925804098541a9982dde29, type: 2}
+      objectReference: {fileID: 2100000, guid: 26d99627c22e8c34b914182dcafc5af9, type: 2}
     - target: {fileID: 543618938240513654, guid: 0609ce8acafebef48927a490d4c241fe,
         type: 3}
       propertyPath: m_Material
